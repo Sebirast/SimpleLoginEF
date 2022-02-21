@@ -1,7 +1,7 @@
 <?php
 ini_set('display_errors', 1);
 
-$login = file('../files/spam.txt', FILE_IGNORE_NEW_LINES);
+$login = file('./data/data.txt', FILE_IGNORE_NEW_LINES);
 $output = [];
 
 
