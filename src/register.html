@@ -1,0 +1,35 @@
+<html>
+    <head>
+
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+        <title>Hello, world!</title>
+    </head>
+    <body>
+        <h1 style="text-align: center;">Register User</h1>
+        <div style="text-align: center;">
+            <label for="username">Username:</label>
+            <input id="usernameInput" type="text">
+            <label for="password">Password:</label>
+            <input id="passwordInput" type="text">
+        </div>
+
+        <div style="text-align: center;">
+            <button id="registerButton" type="button" class="btn btn-primary" style="text-align: center;">Register User</button>
+        </div>
+
+        <script>
+            document.getElementById("registerButton").addEventListener("click", function() {
+                let username = document.getElementById("usernameInput").value;
+                let password = document.getElementById("passwordInput").value;
+
+                var url = new URL(location.href + "/save.php" + "?username=" + username + "&password=" + password);
+            });
+        </script>
+    </body>
+</html>
